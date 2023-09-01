@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="freento" translate="label" sortOrder="83">
+            <label>Freento</label>
+        </tab>
+        <section id="search" translate="label" type="text" sortOrder="84" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Fast Search Autocomplete</label>
+            <tab>freento</tab>
+            <resource>Freento_FastSearchAutocomplete::services_config</resource>
+            <group id="autocomplete" translate="label" type="text" sortOrder="88" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="mode" translate="label" type="select" sortOrder="89" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Mode</label>
+                    <source_model>Freento\FastSearchAutocomplete\Model\Config\Source\ListMode</source_model>
+                </field>
+                <field id="generate_search_configuration" translate="label comment" sortOrder="90" type="button" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Generate Search Configuration File</label>
+                    <frontend_model>Freento\FastSearchAutocomplete\Block\Adminhtml\Settings\Generate</frontend_model>
+                    <comment>Is used in a fast mode. Path for the generated file: var/freento-elastic-config.json</comment>
+                    <depends>
+                        <field id="mode">direct</field>
+                    </depends>
+                </field>
+                <field id="max_results_count" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Max results count</label>
+                    <comment>Maximum qty of search results in dropdown</comment>
+                </field>
+                <field id="max_search_result_symbols" translate="label comment" sortOrder="110" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Symbols limit for one search result</label>
+                    <comment>Use 0 or empty value to remove limit</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

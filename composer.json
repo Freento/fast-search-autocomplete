@@ -1,0 +1,17 @@
+{
+    "name": "freento/fast-search-autocomplete",
+    "description": "Freento Fast Search Autocomplete",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Freento\\FastSearchAutocomplete\\": ""
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <referenceBlock name="header-search">
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">Freento_FastSearchAutocomplete::html/header/search-form.phtml</argument>
+                </action>
+                <arguments>
+                    <argument name="search.form.helper" xsi:type="object">Freento\FastSearchAutocomplete\ViewModel\SearchForm</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>

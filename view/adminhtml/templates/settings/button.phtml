@@ -1,0 +1,25 @@
+<div id="messages" >
+    <div class="messages">
+        <div class="message message-success success" style="display: none;">
+            <div data-ui-id="messages-message-success">
+                <span class="message-text"></span>
+            </div>
+        </div>
+        <div class="message message-error error" style="display: none;">
+            <div data-ui-id="messages-message-error">
+                <span class="message-text"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $block->getButtonHtml() ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Freento_FastSearchAutocomplete/js/generate": {
+                "urlGenerate": "<?= $block->getAjaxUrl(); ?>"
+            }
+        }
+    }
+</script>
